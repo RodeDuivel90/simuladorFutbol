@@ -20,6 +20,7 @@ public class Torneo {
     static ArrayList<Equipos> euroCampeones= new ArrayList<>();
     static ArrayList<Equipos> americaCampeones= new ArrayList<>();
     static ArrayList<Equipos> hosts= new ArrayList<>();
+    static ArrayList<ArrayList<Equipos>> tablaClasif = new ArrayList<>();
     static ArrayList<Partidos> todosPartidos= new ArrayList<>();
     ArrayList<Equipos> elim= new ArrayList<>();
     static ArrayList<Equipos> mundial34= new ArrayList<>();
@@ -310,6 +311,7 @@ public class Torneo {
         Grupos.resultadosEquipo(bra);
         System.out.println(Torneo.todosPartidos.size());
         Grupos.tablaMundial(todosPartidos);
+        Grupos.Tablas(tablaClasif);
         
         
     }

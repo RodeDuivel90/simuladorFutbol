@@ -732,6 +732,8 @@ public class Grupos {
           System.out.println(i+1+". "+equiposMundial.get(i).nombre);
       }
       
+      Torneo.tablaClasif.add(equiposMundial);
+      
   }
   
   static void clasificacion(String local, String local2, Equipos campeon){
@@ -774,6 +776,8 @@ public class Grupos {
       for(int i=0; i<equiposMundial.size(); i++){
           System.out.println(i+1+". "+equiposMundial.get(i).nombre);
       }
+      
+      Torneo.tablaClasif.add(equiposMundial);
       
   }
   
@@ -831,6 +835,8 @@ public class Grupos {
           System.out.println(i+1+". "+equiposMundial.get(i).nombre+" "+equiposMundial.get(i).posicion);
       }
       
+      Torneo.tablaClasif.add(equiposMundial);
+      
   }
   
   static void clasificacionRepe(String local, Equipos campeon, int primerPart, int partidosCant){
@@ -873,6 +879,8 @@ public class Grupos {
           System.out.println(i+1+". "+equiposMundial.get(i).nombre);
       }
       
+      Torneo.tablaClasif.add(equiposMundial);
+      
   }
   
   
@@ -894,6 +902,35 @@ public class Grupos {
         };
          return comp;
     } 
+  
+  
+  public static void Tablas(ArrayList<ArrayList<Equipos>> tablas){
+      
+      ArrayList<Equipos> mundialistas = new ArrayList<>();
+      for(int i=0; i<tablas.size(); i++){
+          for(int j=0; j<tablas.get(i).size(); j++){
+              if(!mundialistas.contains(tablas.get(i).get(j))){
+                  mundialistas.add(tablas.get(i).get(j));
+              }
+          }
+      }
+      for(int i=0; i<mundialistas.size(); i++){
+          System.out.println("");
+          System.out.println(mundialistas.get(i).nombre);
+          for(int j=0; j<tablas.size(); j++){
+              
+              if(tablas.get(j).contains(mundialistas.get(i))){
+                  int pos = tablas.get(j).indexOf(mundialistas.get(i))+1;
+                  System.out.println(Torneo.anyos[j]+" "+pos+"°");
+              }else{
+                  System.out.println(Torneo.anyos[j]+" -");
+              }
+              
+          }
+          
+      }
+      
+  }
   
   
   
