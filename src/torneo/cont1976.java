@@ -30,6 +30,7 @@ public class cont1976 {
     }
     
     public void c1976(){
+        t.Eliminar(Torneo.hosts, Torneo.fra.nombre);
         System.out.println("EUROCOPA 1976");
         t.Resetear(Torneo.selecciones);
         Collections.sort(Torneo.selecciones, Torneo.rankingElo());

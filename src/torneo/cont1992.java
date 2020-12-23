@@ -52,6 +52,7 @@ public class cont1992 {
         Torneo.por.nivel=2;
         Torneo.bol.nivel=3;
         euro=c1992elim();
+        Torneo.rus.nombre = "CEI           ";
         euro.add(Torneo.swe);
         Funciones.ordenarMundial(euro, Torneo.swe, Torneo.euroCampeones.get(7));
         grilla=Torneo.chopped(euro, 2, 4);
