@@ -97,6 +97,7 @@ public class mundial1994 {
          ofc=Torneo.confed("ofc", elim);
          mundial= m1994elim();
          mundial.add(Torneo.usa);
+         Torneo.cze.nombre="RCS           ";
          if(elim.contains(Torneo.campeones.get(13))&&!Torneo.campeones.get(13).equals(Torneo.usa)){
              mundial.add(Torneo.campeones.get(13));
          }
